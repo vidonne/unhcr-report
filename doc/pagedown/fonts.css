@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+blockquote,
+h1,
+h2,
+a,
+.subhead {
+  color: #0072BC;
+}
+
+blockquote,
+.subhead {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 3.5em;
+}
+.subhead {
+  font-weight: bold;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+pre, code {
+  font-size: .95em;
+}

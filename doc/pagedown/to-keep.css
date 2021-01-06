@@ -1,0 +1,4 @@
+/* columns */
+.col-2 {
+  columns: 2;
+}
