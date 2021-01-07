@@ -19,7 +19,7 @@
 <meta name="description" content="Reproducible Analysis">
 
 <script id="pandoc-meta" type="application/json">
-{"newpage_html_class":"page-break-after","loa-title":"Acronyms","toc-title":"Contents","lof":true,"lof-title":"Figures","paged-footnotes":true,"links-to-footnotes":true,"date":"17 December 2020","subtitle":"PDF Report","lot":true,"output":{"pagedown::html_paged":{"self_contained":false,"toc":true,"css":["report-fonts.css","report-page.css","report.css"],"front_cover":"img/cover_placeholder.jpg","number_sections":false,"back_cover":"img/unhcr_backcover.svg"}},"lot-title":"Tables","abstract-title":"First page sub-title","author":[{"email":"<a href=\"mailto:contactemail@unhcr.org\" class=\"email\">contactemail@unhcr.org</a>","name":"Contact name","affiliation":"Job title"},{"email":"<a href=\"mailto:contactemail@unhcr.org\" class=\"email\">contactemail@unhcr.org</a>","name":"Contact name","affiliation":"Job title"}],"abstract":"Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derro restes serionet autasperit ut estrum, ut quia excero et vit voloreic torum quae erias earchil explique pe officabo","title":"Reproducible Analysis"}
+{"newpage_html_class":"page-break-after","loa-title":"Acronyms","toc-title":"Contents","lof":true,"lof-title":"Figures","paged-footnotes":true,"links-to-footnotes":true,"date":"17 December 2020","subtitle":"PDF Report","lot":true,"output":{"pagedown::html_paged":{"self_contained":false,"toc":true,"css":["report-fonts.css","report-page.css","report.css"],"front_cover":"img/cover_placeholder.jpg","number_sections":false,"back_cover":"img/unhcr_backcover.svg"}},"lot-title":"Tables","abstract-title":"First page sub-title","author":[{"email":"<a href=\"mailto:contact1email@unhcr.org\" class=\"email\">contact1email@unhcr.org</a>","name":"Contact name1","affiliation":"Job title1"},{"email":"<a href=\"mailto:contact2email@unhcr.org\" class=\"email\">contact2email@unhcr.org</a>","name":"Contact name2","affiliation":"Job title2"}],"abstract":"Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derro restes serionet autasperit ut estrum, ut quia excero et vit voloreic torum quae erias earchil explique pe officabo","title":"Reproducible Analysis"}
 </script>
 
 <title>Reproducible Analysis</title>
@@ -127,13 +127,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header" class="title-page">
 <h1 class="title">Reproducible Analysis</h1>
 <h1 class="subtitle"><span>PDF Report</span></h1>
-<h2 class="author">Contact name</h2>
+<h2 class="author">Contact name1</h2>
 <address class="author-afil">
-Job title<br/><a class="author-email" href="mailto:#"><a href="mailto:contactemail@unhcr.org" class="email">contactemail@unhcr.org</a></a>
+Job title1<br/><a class="author-email" href="mailto:#"><a href="mailto:contact1email@unhcr.org" class="email">contact1email@unhcr.org</a></a>
 </address>
-<h2 class="author">Contact name</h2>
+<h2 class="author">Contact name2</h2>
 <address class="author-afil">
-Job title<br/><a class="author-email" href="mailto:#"><a href="mailto:contactemail@unhcr.org" class="email">contactemail@unhcr.org</a></a>
+Job title2<br/><a class="author-email" href="mailto:#"><a href="mailto:contact2email@unhcr.org" class="email">contact2email@unhcr.org</a></a>
 </address>
 <h2 class="date">17 December 2020</h2>
 </div>
@@ -805,6 +805,9 @@ Others of concern
 <li><code>.table-bordered</code>: To apply borders all around the table and cells.</li>
 <li><code>.table-borderless</code>: To remove all borders.</li>
 </ul>
+<div class="page-break">
+
+</div>
 <p><strong>Example:</strong></p>
 <table class="table table-striped-blue table-width">
 <caption>
@@ -985,6 +988,9 @@ OOC
 <p>This will be colored <span class="unhcr-blue">blue</span> and this will be <span class="unhcr-grey">grey</span>. It can even be mixed with other inline styling like <strong><span class="unhcr-blue">bold</span></strong>.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>This will be colored [blue]{.unhcr<span class="op">-</span>blue} and this will be [grey]{.unhcr<span class="op">-</span>grey}.</span>
 <span id="cb20-2"><a href="#cb20-2"></a>It can even be mixed with other inline styling like <span class="op">**</span>[bold]{.unhcr<span class="op">-</span>blue}<span class="op">**</span>.</span></code></pre></div>
+<div class="page-break">
+
+</div>
 </div>
 <div id="background-color" class="section level2">
 <h2>Background color</h2>
@@ -1046,6 +1052,9 @@ OOC
 <span id="cb23-10"><a href="#cb23-10"></a>This will float <span class="kw">end</span> (right of the page).</span>
 <span id="cb23-11"><a href="#cb23-11"></a><span class="op">:::</span></span>
 <span id="cb23-12"><a href="#cb23-12"></a><span class="er">:::</span></span></code></pre></div>
+<div class="page-break">
+
+</div>
 </div>
 <div id="page-break" class="section level2">
 <h2>Page break</h2>
@@ -1054,6 +1063,27 @@ OOC
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># Create an empty div thet will push all following content to the next page.</span></span>
 <span id="cb24-2"><a href="#cb24-2"></a><span class="op">:::</span>{.page<span class="op">-</span><span class="cf">break</span>}</span>
 <span id="cb24-3"><a href="#cb24-3"></a><span class="op">:::</span></span></code></pre></div>
+<div class="back-cover">
+<div class="back-header">
+<h1 class="back-title">
+</h1>
+<h1 class="back-subtitle">
+</h1>
+</div>
+<div class="back-footer">
+<p>For more information please contact:</p>
+<div class="back-contact">
+<p><span class="back-name">Contact1 Name</span></p>
+<p>Contact1 Title</p>
+<p><a href="mailto:email1@unhcr.org">email1@unhcr.org</a></p>
+</div>
+<div class="back-contact">
+<p><span class="back-name">Contact2 Name</span></p>
+<p>Contact2 Title</p>
+<p><a href="mailto:email2@unhcr.org">email2@unhcr.org</a></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

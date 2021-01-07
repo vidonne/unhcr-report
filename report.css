@@ -342,7 +342,14 @@ th {
    padding-right: var(--cover-title-width);
  }
  
- .title, .subtitle {
+ .back-header {
+   padding: 5mm;
+   padding-right: 25%;
+ }
+ 
+ .title, .subtitle,
+ .back-title,
+ .back-subtitle {
    font-size: 3.5em;
    line-height: 1;
    font-weight: 700;
@@ -350,12 +357,19 @@ th {
    margin-bottom: 0;
  }
  
- .title {
+ .title,
+ .back-title {
    color: white;
  }
  
- .subtitle {
+ .subtitle,
+ .back-subtitle {
    color: var(--unhcr-yellow);
+ }
+ 
+ .back-title,
+ .back-subtitle {
+   font-size: 3em;
  }
  
  .front-page .author,
@@ -383,6 +397,31 @@ th {
    font-weight: 400;
  }
  
+.back-footer {
+   position: absolute;
+   top: 190mm;
+   padding-left: 5mm;
+ }
+ 
+.back-footer p,
+.back-footer  a {
+  color: white;
+  margin-bottom: 0;
+}
+
+.back-contact {
+  margin-bottom: 0.75em;
+  line-height: 1.4;
+}
+
+.back-name {
+  font-weight: 700;
+}
+
+.back-footer a {
+  text-decoration: none;
+}
+
 /* Helper function */
 .col2 {
   columns: 2;

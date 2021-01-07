@@ -8,14 +8,15 @@ abstract-title: First page sub-title
 abstract: "Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derro restes serionet autasperit ut estrum, ut quia excero et vit voloreic torum quae erias earchil explique pe officabo"
 # Date is used in the running footer
 date: "17 December 2020"
-# Author are used for the contact on the back cover
+# Author are the persons creating the doc. They won't appear in the doc but will be part of the DOM.
+# For the contact on the back cover, please refer to the bottom of the Rmd and ammend accordingly.
 author:
-  - name: Contact name
-    affiliation: Job title
-    email: <contactemail@unhcr.org>
-  - name: Contact name
-    affiliation: Job title
-    email: <contactemail@unhcr.org>
+  - name: Contact name1
+    affiliation: Job title1
+    email: <contact1email@unhcr.org>
+  - name: Contact name2
+    affiliation: Job title2
+    email: <contact2email@unhcr.org>
 output:
   pagedown::html_paged:
     css: ["report-fonts.css", "report-page.css", "report.css"]
@@ -525,6 +526,9 @@ Here is the list of the available classes:
 * `.table-bordered`: To apply borders all around the table and cells.
 * `.table-borderless`: To remove all borders.
 
+:::{.page-break}
+:::
+
 **Example:**
 
 ```{r table-class, echo=FALSE, message=FALSE, warning=FALSE}
@@ -581,6 +585,9 @@ This will be colored [blue]{.unhcr-blue} and this will be [grey]{.unhcr-grey}. I
 This will be colored [blue]{.unhcr-blue} and this will be [grey]{.unhcr-grey}.
 It can even be mixed with other inline styling like **[bold]{.unhcr-blue}**.
 ```
+
+:::{.page-break}
+:::
 
 ## Background color
 
@@ -663,6 +670,9 @@ This will float end (right of the page).
 :::
 ```
 
+:::{.page-break}
+:::
+
 ## Page break
 
 The template automatically creates a page break when your content doesn't fit into a page. However, you may need to control this fragmentation to avoid solitary element. Simply create a fenced div with the class `.page-break` and it will push all the following content to the next page. Avoid using the `.page-break` class alongside floating element.
@@ -673,5 +683,37 @@ The template automatically creates a page break when your content doesn't fit in
 # Create an empty div thet will push all following content to the next page.
 :::{.page-break}
 :::
-
 ```
+
+::: {.back-cover}
+
+::: {.back-header}
+<h1 class="back-title"></h1>
+<h1 class="back-subtitle"></h1>
+:::
+
+::: {.back-footer}
+For more information please contact:
+
+::: {.back-contact}
+[Contact1 Name]{.back-name}
+
+Contact1 Title
+
+[email1@unhcr.org](mailto:email1@unhcr.org)
+:::
+
+::: {.back-contact}
+[Contact2 Name]{.back-name}
+
+Contact2 Title
+
+[email2@unhcr.org](mailto:email2@unhcr.org)
+:::
+
+:::
+
+:::
+
+
+

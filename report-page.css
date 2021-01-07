@@ -12,7 +12,7 @@
 /*****
  Store some string variables
  *****/
- .date {
+.date {
   string-set: date-text content(text);
 }
  
@@ -212,13 +212,21 @@
 
 /* last page or back cover */
 .back-cover {
-  break-before: verso;
+  break-before: left;
+  page: backmatter;
 }
 .pagedjs_page:last-of-type {
   background-image: var(--back-cover);
   background-position: 10mm 30mm;
   background-size: 190mm 257mm;
   background-repeat: no-repeat;
+}
+
+.back-title:after {
+  content: string(title-text);
+}
+.back-subtitle:after {
+  content: string(subtitle-text);
 }
 
 /* page breaks; aka CSS fragmentation */
