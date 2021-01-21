@@ -12,8 +12,10 @@ be implemented in the wider
 
 ## Ongoing issues
 
--   White page between the frontmatter part and the chapter part
+-   White page between the frontmatter part and the chapter part -
+    [Pagedown Issue 209](https://github.com/rstudio/pagedown/issues/209)
 -   Plot duplication when at the bottom of page
--   Styled table don’t show in LoT - [Pagedown
-    Issue](https://github.com/rstudio/pagedown/issues/191)
--   2 pages push for Back-cover
+-   Styled table don’t show in LoT - [Pagedown Issue
+    191](https://github.com/rstudio/pagedown/issues/191)
+-   2 pages push for Back-cover - [Pagedown Issue
+    209](https://github.com/rstudio/pagedown/issues/209)

@@ -19,34 +19,33 @@
 <meta name="description" content="Reproducible Analysis">
 
 <script id="pandoc-meta" type="application/json">
-{"newpage_html_class":"page-break-after","loa-title":"Acronyms","toc-title":"Contents","lof":true,"lof-title":"Figures","paged-footnotes":true,"links-to-footnotes":true,"date":"17 December 2020","subtitle":"PDF Report","lot":true,"output":{"pagedown::html_paged":{"self_contained":false,"toc":true,"css":["report-fonts.css","report-page.css","report.css"],"front_cover":"img/cover_placeholder.jpg","number_sections":false,"back_cover":"img/unhcr_backcover.svg"}},"lot-title":"Tables","abstract-title":"First page sub-title","author":[{"email":"<a href=\"mailto:contact1email@unhcr.org\" class=\"email\">contact1email@unhcr.org</a>","name":"Contact name1","affiliation":"Job title1"},{"email":"<a href=\"mailto:contact2email@unhcr.org\" class=\"email\">contact2email@unhcr.org</a>","name":"Contact name2","affiliation":"Job title2"}],"abstract":"Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derro restes serionet autasperit ut estrum, ut quia excero et vit voloreic torum quae erias earchil explique pe officabo","title":"Reproducible Analysis"}
+{"newpage_html_class":"page-break-after","loa-title":"Acronyms","toc-title":"Contents","lof":"true","lof-title":"Figures","paged-footnotes":"true","links-to-footnotes":"true","date":"17 December 2020","subtitle":"PDF Report","lot":"true","output":{"pagedown::html_paged":{"self_contained":null,"toc":"true","css":["report-fonts.css","report-page.css","report.css"],"front_cover":"img/cover_placeholder.jpg","number_sections":null,"back_cover":"img/unhcr_backcover.svg"}},"lot-title":"Tables","abstract-title":"First page sub-title","author":[{"email":"<a href=\"mailto:contact1email@unhcr.org\" class=\"email\">contact1email@unhcr.org</a>","name":"Contact name1","affiliation":"Job title1"},{"email":"<a href=\"mailto:contact2email@unhcr.org\" class=\"email\">contact2email@unhcr.org</a>","name":"Contact name2","affiliation":"Job title2"}],"abstract":"Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derro restes serionet autasperit ut estrum, ut quia excero et vit voloreic torum quae erias earchil explique pe officabo","title":"Reproducible Analysis"}
 </script>
 
 <title>Reproducible Analysis</title>
 
 
+<script src="unhcr-report_files/header-attrs-2.6/header-attrs.js"></script>
 <link id="front-cover-1-pagedown-attachment" rel="attachment" href="unhcr-report_files/front-cover-1-0.13/cover_placeholder.jpg"/>
 <link id="back-cover-1-pagedown-attachment" rel="attachment" href="unhcr-report_files/back-cover-1-0.13/unhcr_backcover.svg"/>
 <script src="unhcr-report_files/paged-0.13/js/config.js"></script>
 <script src="unhcr-report_files/paged-0.13/js/paged.js"></script>
 <script src="unhcr-report_files/paged-0.13/js/hooks.js"></script>
-<script src="unhcr-report_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -66,7 +65,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -149,13 +148,15 @@ Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derr
 <ul>
 <li><a href="#LOT">Tables</a></li>
 <li><a href="#LOF">Figures</a></li>
-<li><a href="#template">Template</a><ul>
+<li><a href="#template">Template</a>
+<ul>
 <li><a href="#r-markdown">R Markdown</a></li>
 <li><a href="#preview-paged-html-report">Preview paged HTML report</a></li>
 <li><a href="#print-to-pdf">Print to PDF</a></li>
 <li><a href="#yaml-metadata">YAML metadata</a></li>
 </ul></li>
-<li><a href="#typography">Typography</a><ul>
+<li><a href="#typography">Typography</a>
+<ul>
 <li><a href="#inline-text-element-syntax">Inline text element syntax</a></li>
 <li><a href="#headings">Headings</a></li>
 <li><a href="#lead">Lead</a></li>
@@ -164,12 +165,14 @@ Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derr
 <li><a href="#footnotes">Footnotes</a></li>
 <li><a href="#lists">Lists</a></li>
 </ul></li>
-<li><a href="#images-plots-and-tables">Images, plots and tables</a><ul>
+<li><a href="#images-plots-and-tables">Images, plots and tables</a>
+<ul>
 <li><a href="#images">Images</a></li>
 <li><a href="#plots">Plots</a></li>
 <li><a href="#tables">Tables</a></li>
 </ul></li>
-<li><a href="#helper-class">Helper class</a><ul>
+<li><a href="#helper-class">Helper class</a>
+<ul>
 <li><a href="#text-color">Text color</a></li>
 <li><a href="#background-color">Background color</a></li>
 <li><a href="#columns">Columns</a></li>
@@ -203,7 +206,7 @@ Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derr
 <h2>R Markdown</h2>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">summary</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code></pre></div>
 <pre><code>##      speed           dist       
 ##  Min.   : 4.0   Min.   :  2.00  
 ##  1st Qu.:12.0   1st Qu.: 26.00  
@@ -215,8 +218,8 @@ Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derr
 <div id="preview-paged-html-report" class="section level2">
 <h2>Preview paged HTML report</h2>
 <p>When you compile an R Markdown document to HTML in RStudio, RStudio will display the HTML page through a local web server, so paged.js will work in RStudio Viewer. However, when you view such pages in a real web browser, you will need a separate web server. The easiest way to preview these HTML pages in a web browser may be through the RStudio <strong>servr</strong> package, just type the following code in your R console and head to <a href="http://127.0.0.1:4321/" class="uri">http://127.0.0.1:4321/</a> in your browser to access the files.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Load webserver to preview paged HTML </span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>servr<span class="op">::</span><span class="kw">httd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load webserver to preview paged HTML </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>servr<span class="sc">::</span><span class="fu">httd</span>()</span></code></pre></div>
 </div>
 <div id="print-to-pdf" class="section level2">
 <h2>Print to PDF</h2>
@@ -226,7 +229,7 @@ Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derr
 <li>using the function pagedown::chrome_print(). Its first argument (input) accepts a path to a local Rmd or HTML file or an URL. Google Chrome or Chromium must be installed on your system.</li>
 <li>in RStudio, adding the following line in the YAML header of your Rmd file:</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>knit<span class="op">:</span><span class="st"> </span>pagedown<span class="op">::</span>chrome_print</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knit<span class="sc">:</span> pagedown<span class="sc">::</span>chrome_print</span></code></pre></div>
 <p>With this metadata parameter, the behavior of the “Knit” button of RStudio is modified: it produces both the HTML document and the PDF with Chrome. This functionality is suitable for any R Markdown HTML output format and is mainly convenient for small documents like presentations or notes.
 If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN_CHROME environment variable to the path to Chrome or Chromium executable.</p>
 </div>
@@ -254,15 +257,15 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <p>You can use the <code>&lt;u&gt;</code> tag to <u>underline text</u>.</p>
 <p>You can use the <code>&lt;mark&gt;</code> tag to <mark>highlight text</mark>.</p>
 <p>This <code>^text or number^</code> rendered as <sup>superscript</sup>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">*</span>This line rendered as italicized text.<span class="op">*</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="er">**</span>This line rendered as bold text.<span class="op">**</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="er">***</span>This line rendered as italicized and bold text.<span class="op">**</span><span class="er">*</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="er">~~</span>This line of text will be strikethrough.<span class="op">~</span><span class="er">~</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co"># There is no R Markdown code for underline but HTML can be entered directly.</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>You can use the <span class="st">&#39;&lt;u&gt;&#39;</span> tag to <span class="op">&lt;</span>u<span class="op">&gt;</span>underline text<span class="op">&lt;</span><span class="er">/</span>u<span class="op">&gt;</span>.</span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># There is no R Markdown code for mark but HTML can be entered directly.</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>You can use the <span class="st">&#39;&lt;mark&gt;&#39;</span> tag to <span class="op">&lt;</span>mark<span class="op">&gt;</span>highlight text<span class="op">&lt;</span><span class="er">/</span>mark<span class="op">&gt;</span>.</span>
-<span id="cb5-9"><a href="#cb5-9"></a>This <span class="st">&#39;^text or number^&#39;</span> rendered as <span class="op">^</span>superscript<span class="op">^</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>This line rendered as italicized text.<span class="sc">*</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="er">**</span>This line rendered as bold text.<span class="sc">**</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="er">***</span>This line rendered as italicized and bold text.<span class="sc">**</span><span class="er">*</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="er">~~</span>This line of text will be strikethrough.<span class="sc">~</span><span class="er">~</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># There is no R Markdown code for underline but HTML can be entered directly.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>You can use the <span class="st">&#39;&lt;u&gt;&#39;</span> tag to <span class="sc">&lt;</span>u<span class="sc">&gt;</span>underline text<span class="sc">&lt;</span><span class="er">/</span>u<span class="sc">&gt;</span>.</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># There is no R Markdown code for mark but HTML can be entered directly.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>You can use the <span class="st">&#39;&lt;mark&gt;&#39;</span> tag to <span class="sc">&lt;</span>mark<span class="sc">&gt;</span>highlight text<span class="sc">&lt;</span><span class="er">/</span>mark<span class="sc">&gt;</span>.</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>This <span class="st">&#39;^text or number^&#39;</span> rendered as <span class="sc">^</span>superscript<span class="sc">^</span>.</span></code></pre></div>
 </div>
 <div id="headings" class="section level2">
 <h2>Headings</h2>
@@ -280,12 +283,12 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <h5>h5 Heading</h5>
 <div id="h6-heading" class="section level6">
 <h6>h6 Heading</h6>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># h1 Heading</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="co">## h2 Heading</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co">### h3 Heading</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#### h4 Heading</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="co">##### h5 Heading</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="co">###### h6 Heading</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># h1 Heading</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">## h2 Heading</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="do">### h3 Heading</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">#### h4 Heading</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="do">##### h5 Heading</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="do">###### h6 Heading</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -297,10 +300,10 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <div class="lead">
 <p>Example of a paragraph with the <code>.lead</code> class applied</p>
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># To apply a specific class to an element use the below R Markdown code</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="op">:::</span><span class="st"> </span>{.lead}</span>
-<span id="cb7-3"><a href="#cb7-3"></a>Example of a paragraph with the <span class="st">`</span><span class="dt">.lead</span><span class="st">`</span> class applied</span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="op">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To apply a specific class to an element use the below R Markdown code</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.lead}</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Example of a paragraph with the <span class="st">`</span><span class="at">.lead</span><span class="st">`</span> class applied</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code></pre></div>
 </div>
 <div id="quotes" class="section level2">
 <h2>Quotes</h2>
@@ -315,13 +318,13 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <blockquote>
 <p>The situation in South Sudan is far too fragile and dangerous for people to go back.</p>
 </blockquote>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Complete</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="op">&gt;</span><span class="st"> </span>Quote text</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="op">&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="er">&gt;</span><span class="st"> </span>First and Last name</span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="co"># Simple</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="op">&gt;</span><span class="st"> </span>Quote text</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Complete</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> Quote text</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="er">&gt;</span> First and Last name</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Simple</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> Quote text</span></code></pre></div>
 </div>
 <div id="abbreviations" class="section level2">
 <h2>Abbreviations</h2>
@@ -329,16 +332,16 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <p>For instance, if the R Markdown document contains <code>&lt;abbr title="United Nations High Commissioner for Refugees"&gt;UNHCR&lt;/abbr&gt;</code>, a list of abbreviations is built with the CSS definition.</p>
 <p><strong>Example:</strong></p>
 <p><abbr title="The United Nations High Commissioner for Refugees">UNHCR</abbr></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># There is no R Markdown code for abbreviations but HTML can be entered directly.</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="op">&lt;</span>abbr title=<span class="st">&quot;The United Nations High Commissioner for Refugees&quot;</span><span class="op">&gt;</span>UNHCR<span class="op">&lt;</span><span class="er">/</span>abbr<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># There is no R Markdown code for abbreviations but HTML can be entered directly.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>abbr title<span class="ot">=</span><span class="st">&quot;The United Nations High Commissioner for Refugees&quot;</span><span class="sc">&gt;</span>UNHCR<span class="sc">&lt;</span><span class="er">/</span>abbr<span class="sc">&gt;</span></span></code></pre></div>
 </div>
 <div id="footnotes" class="section level2">
 <h2>Footnotes</h2>
 <p>Footnotes are added using the <code>^[This is a footnote]</code> R Markdown notation. The number will be automatically generated and the text between brackets will be added at the bottom of the footnote page.</p>
 <p><strong>Example:</strong></p>
 <p>This is a footnote<span id="fn1" class="footnote" style="white-space: pre-line;" data-pagedown-footnote-number="1">Text of the footnote</span>, it can include anything and can also be stylize UNHCR<span id="fn2" class="footnote" style="white-space: pre-line;" data-pagedown-footnote-number="2">The <strong>United Nations</strong> High Commissioner for Refugees <a href="https://www.unhcr.org/" class="uri">https://www.unhcr.org/</a></span></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>This is a footnote<span class="op">^</span>[Text of the footnote]</span>
-<span id="cb10-2"><a href="#cb10-2"></a>UNHCR<span class="op">^</span>[The <span class="op">**</span>United Nations<span class="op">**</span><span class="st"> </span>High Commissioner <span class="cf">for</span> Refugees <span class="op">&lt;</span>https<span class="op">:</span><span class="er">//</span>www.unhcr.org<span class="op">/</span><span class="er">&gt;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>This is a footnote<span class="sc">^</span>[Text of the footnote]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>UNHCR<span class="sc">^</span>[The <span class="sc">**</span>United Nations<span class="sc">**</span> High Commissioner <span class="cf">for</span> Refugees <span class="sc">&lt;</span>https<span class="sc">:</span><span class="er">//</span>www.unhcr.org<span class="sc">/</span><span class="er">&gt;</span>]</span></code></pre></div>
 </div>
 <div id="lists" class="section level2">
 <h2>Lists</h2>
@@ -359,13 +362,13 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <li>sub-item 3.2</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">*</span><span class="st"> </span>item <span class="dv">1</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="op">*</span><span class="st"> </span>item <span class="dv">2</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="op">+</span><span class="st"> </span>sub<span class="op">-</span>item <span class="fl">2.1</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="op">+</span><span class="st"> </span>sub<span class="op">-</span>item <span class="fl">2.2</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="op">*</span><span class="st"> </span>item <span class="dv">3</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a>    <span class="op">+</span><span class="st"> </span>sub<span class="op">-</span>item <span class="fl">3.1</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a>    <span class="op">+</span><span class="st"> </span>sub<span class="op">-</span>item <span class="fl">3.2</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> item <span class="dv">1</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> item <span class="dv">2</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="fl">2.1</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="fl">2.2</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> item <span class="dv">3</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="fl">3.1</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="sc">+</span> sub<span class="sc">-</span>item <span class="fl">3.2</span></span></code></pre></div>
 </div>
 <div id="ordered" class="section level5">
 <h5>Ordered</h5>
@@ -384,13 +387,13 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <li>item 3.2</li>
 </ol></li>
 </ol>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fl">1.</span> item <span class="dv">1</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="fl">2.</span> item <span class="dv">2</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>    <span class="fl">1.</span> item <span class="fl">2.1</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>    <span class="fl">2.</span> item <span class="fl">2.2</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="fl">3.</span> item <span class="dv">3</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="fl">1.</span> item <span class="fl">3.1</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a>    <span class="fl">2.</span> item <span class="fl">3.2</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> item <span class="dv">1</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> item <span class="dv">2</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> item <span class="fl">2.1</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> item <span class="fl">2.2</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> item <span class="dv">3</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> item <span class="fl">3.1</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> item <span class="fl">3.2</span></span></code></pre></div>
 </div>
 <div id="mixed" class="section level5">
 <h5>Mixed</h5>
@@ -413,13 +416,13 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <li>item 3.2</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fl">1.</span> item <span class="dv">1</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="op">*</span><span class="st"> </span>item <span class="dv">2</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>    <span class="fl">1.</span> item <span class="fl">2.1</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="fl">2.</span> item <span class="fl">2.2</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="fl">3.</span> item <span class="dv">3</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>    <span class="op">*</span><span class="st"> </span>item <span class="fl">3.1</span></span>
-<span id="cb13-7"><a href="#cb13-7"></a>    <span class="op">*</span><span class="st"> </span>item <span class="fl">3.2</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> item <span class="dv">1</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> item <span class="dv">2</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.</span> item <span class="fl">2.1</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.</span> item <span class="fl">2.2</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> item <span class="dv">3</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="sc">*</span> item <span class="fl">3.1</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="sc">*</span> item <span class="fl">3.2</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -435,10 +438,10 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <p><strong>Example:</strong></p>
 <p><img src="img/169_pics_landscape.png" alt="Placeholder" />
 <em>Image caption text. © UNHCR Photographer name</em></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Important NOT to include an extra line break after the image</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="co"># to make sure the caption is stylized correctly</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="op">!</span>[Placeholder](img<span class="op">/</span><span class="dv">169</span>_pics_landscape.png)</span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="op">*</span>Image caption text. <span class="op">&amp;</span>copy; UNHCR Photographer name<span class="op">*</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Important NOT to include an extra line break after the image</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># to make sure the caption is stylized correctly</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Placeholder](img<span class="sc">/</span>169_pics_landscape.png)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Image caption text. <span class="sc">&amp;</span>copy; UNHCR Photographer name<span class="sc">*</span></span></code></pre></div>
 <div id="helper-classes-and-images" class="section level5">
 <h5>Helper classes and images</h5>
 <p>Whole width images might not always be the best option for your layout, especially with <em>portrait orientation</em> pictures. Use the <code>.img50</code> (<code>max-width: 50%</code>) or <code>.img75</code> (<code>max-width: 75%</code>) classes around the image and caption to reduce their sizes.</p>
@@ -447,10 +450,10 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 <p><img src="img/169_pics_landscape.png" alt="Placeholder" />
 <em>Image caption text. © UNHCR Photographer name</em></p>
 </div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="op">:::</span>{.img50}</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="op">!</span>[Placeholder](img<span class="op">/</span><span class="dv">169</span>_pics_landscape.png)</span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="op">*</span>Image caption text. <span class="op">&amp;</span>copy; UNHCR Photographer name<span class="op">*</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="er">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.img50}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Placeholder](img<span class="sc">/</span>169_pics_landscape.png)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Image caption text. <span class="sc">&amp;</span>copy; UNHCR Photographer name<span class="sc">*</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span></code></pre></div>
 <p>Combine it with the <code>.float-start</code> or <code>.float-end</code> classes to align the image on a specific side of the page and even have text around it.<strong>Be careful with the use of floats</strong> as the image and caption aren’t part of the text flow anymore so all the content that follows will be placed next to it and not anymore below. Wrap both the image (+ caption) and the content you want to be next to it with the class <code>.clearfix</code> to cancel this. The content after the <code>&lt;div class="clearfix"&gt;</code> will be back within the normal flow.</p>
 <p><strong>Example:</strong></p>
 <div class="clearfix">
@@ -460,13 +463,13 @@ If chrome_print() cannot find Chrome or Chromium automatically, set the PAGEDOWN
 </div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus dui eu mi tincidunt, blandit posuere tellus aliquet. Vivamus eget neque felis. Nam vitae est quis lacus aliquet maximus ut id magna. Nulla quis massa felis. Pellentesque sit amet varius felis, non lobortis orci. Aliquam sit amet arcu suscipit, porttitor sapien eget, ultricies ipsum.</p>
 </div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="op">:::</span>{.clearfix}</span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="op">:::</span>{.img50 .float<span class="op">-</span>end}</span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="op">!</span>[Placeholder](img<span class="op">/</span><span class="dv">169</span>_pics_landscape.png)</span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="op">*</span>Image caption text. <span class="op">&amp;</span>copy; UNHCR Photographer name<span class="op">*</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="er">:::</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a>Lorem ipsum dolor sit amet, text that will be placed <span class="cf">next</span> to the image</span>
-<span id="cb16-7"><a href="#cb16-7"></a><span class="op">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.clearfix}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.img50 .float<span class="sc">-</span>end}</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Placeholder](img<span class="sc">/</span>169_pics_landscape.png)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Image caption text. <span class="sc">&amp;</span>copy; UNHCR Photographer name<span class="sc">*</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>Lorem ipsum dolor sit amet, text that will be placed <span class="cf">next</span> to the image</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code></pre></div>
 </div>
 </div>
 <div id="plots" class="section level2">
@@ -787,14 +790,14 @@ Others of concern
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(ref_idp_table,</span>
-<span id="cb17-2"><a href="#cb17-2"></a>             <span class="dt">table.attr =</span> <span class="st">&quot;class=</span><span class="ch">\&quot;</span><span class="st">table</span><span class="ch">\&quot;</span><span class="st">&quot;</span>,</span>
-<span id="cb17-3"><a href="#cb17-3"></a>             <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>,</span>
-<span id="cb17-4"><a href="#cb17-4"></a>             <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&#39;Years&#39;</span>, <span class="st">&#39;Refugees&#39;</span>, <span class="st">&#39;Asylum-seekers&#39;</span>, <span class="st">&#39;IDPs&#39;</span>,</span>
-<span id="cb17-5"><a href="#cb17-5"></a>                           <span class="st">&#39;Venezuelans displaced abroad&#39;</span>, <span class="st">&#39;Stateless persons&#39;</span>,</span>
-<span id="cb17-6"><a href="#cb17-6"></a>                           <span class="st">&#39;Others of concern&#39;</span>),</span>
-<span id="cb17-7"><a href="#cb17-7"></a>             <span class="dt">format.args =</span> <span class="kw">list</span>(<span class="dt">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">scientific =</span> <span class="ot">FALSE</span>),</span>
-<span id="cb17-8"><a href="#cb17-8"></a>             <span class="dt">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ref_idp_table,</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">table.attr =</span> <span class="st">&quot;class=</span><span class="sc">\&quot;</span><span class="st">table</span><span class="sc">\&quot;</span><span class="st">&quot;</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">format =</span> <span class="st">&quot;html&quot;</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&#39;Years&#39;</span>, <span class="st">&#39;Refugees&#39;</span>, <span class="st">&#39;Asylum-seekers&#39;</span>, <span class="st">&#39;IDPs&#39;</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;Venezuelans displaced abroad&#39;</span>, <span class="st">&#39;Stateless persons&#39;</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;Others of concern&#39;</span>),</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">format.args =</span> <span class="fu">list</span>(<span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
 <p>Adding CSS classes to the to the <code>table.attr</code> parameter will only affect the style of the table.</p>
 <p>Here is the list of the available classes:</p>
 <ul>
@@ -956,11 +959,11 @@ OOC
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(ref_idp_table,</span>
-<span id="cb18-2"><a href="#cb18-2"></a>             <span class="dt">table.attr =</span> <span class="st">&quot;class=</span><span class="ch">\&quot;</span><span class="st">table table-striped-blue table-width</span><span class="ch">\&quot;</span><span class="st">&quot;</span>,</span>
-<span id="cb18-3"><a href="#cb18-3"></a>             <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>,</span>
-<span id="cb18-4"><a href="#cb18-4"></a>             <span class="dt">format.args =</span> <span class="kw">list</span>(<span class="dt">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">scientific =</span> <span class="ot">FALSE</span>),</span>
-<span id="cb18-5"><a href="#cb18-5"></a>             <span class="dt">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ref_idp_table,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">table.attr =</span> <span class="st">&quot;class=</span><span class="sc">\&quot;</span><span class="st">table table-striped-blue table-width</span><span class="sc">\&quot;</span><span class="st">&quot;</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">format =</span> <span class="st">&quot;html&quot;</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">format.args =</span> <span class="fu">list</span>(<span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="helper-class" class="section level1">
@@ -974,20 +977,20 @@ OOC
 <p>A ut perore, ut lam simodi sinvel magnis doluptatem que est.</p>
 </div>
 <p>A ut perore, ut lam simodi sinvel <span class="unhcr-blue">magnis doluptatem</span> que est.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Fenced divs</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="op">:::</span>{.unhcr<span class="op">-</span>blue}</span>
-<span id="cb19-3"><a href="#cb19-3"></a>A ut perore, ut lam simodi sinvel magnis doluptatem que est.</span>
-<span id="cb19-4"><a href="#cb19-4"></a><span class="op">:::</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a></span>
-<span id="cb19-6"><a href="#cb19-6"></a><span class="co"># Bracketed spans</span></span>
-<span id="cb19-7"><a href="#cb19-7"></a>A ut perore, ut lam simodi sinvel [magnis doluptatem]{.unhcr<span class="op">-</span>blue} que est.</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fenced divs</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.unhcr<span class="sc">-</span>blue}</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>A ut perore, ut lam simodi sinvel magnis doluptatem que est.</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Bracketed spans</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>A ut perore, ut lam simodi sinvel [magnis doluptatem]{.unhcr<span class="sc">-</span>blue} que est.</span></code></pre></div>
 <div id="text-color" class="section level2">
 <h2>Text color</h2>
 <p>Simply add the <code>.unhcr-blue</code> or <code>.unhcr-grey</code> classes to apply UNHCR branded colors to text element. As mentioned before this can be applied both to fenced divs and inline elements.</p>
 <p><strong>Example:</strong></p>
 <p>This will be colored <span class="unhcr-blue">blue</span> and this will be <span class="unhcr-grey">grey</span>. It can even be mixed with other inline styling like <strong><span class="unhcr-blue">bold</span></strong>.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>This will be colored [blue]{.unhcr<span class="op">-</span>blue} and this will be [grey]{.unhcr<span class="op">-</span>grey}.</span>
-<span id="cb20-2"><a href="#cb20-2"></a>It can even be mixed with other inline styling like <span class="op">**</span>[bold]{.unhcr<span class="op">-</span>blue}<span class="op">**</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>This will be colored [blue]{.unhcr<span class="sc">-</span>blue} and this will be [grey]{.unhcr<span class="sc">-</span>grey}.</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>It can even be mixed with other inline styling like <span class="sc">**</span>[bold]{.unhcr<span class="sc">-</span>blue}<span class="sc">**</span>.</span></code></pre></div>
 <div class="page-break">
 
 </div>
@@ -1003,15 +1006,15 @@ OOC
 <div class="bg-grey">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices mauris eget ligula imperdiet tincidunt. Proin eget odio laoreet, sagittis metus a, rutrum risus. Duis in ante sed enim pharetra pulvinar. Phasellus sit amet vestibulum lorem. Aliquam tincidunt mauris sit amet pharetra viverra.</p>
 </div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Blue example</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="op">:::</span>{.bg<span class="op">-</span>blue}</span>
-<span id="cb21-3"><a href="#cb21-3"></a>Lorem ipsum dolor sit amet,...</span>
-<span id="cb21-4"><a href="#cb21-4"></a><span class="op">:::</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a><span class="st">  </span></span>
-<span id="cb21-6"><a href="#cb21-6"></a><span class="co"># Grey example</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a><span class="er">:::</span>{.bg<span class="op">-</span>grey}</span>
-<span id="cb21-8"><a href="#cb21-8"></a>Lorem ipsum dolor sit amet,...</span>
-<span id="cb21-9"><a href="#cb21-9"></a><span class="op">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Blue example</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.bg<span class="sc">-</span>blue}</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>Lorem ipsum dolor sit amet,...</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Grey example</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span>{.bg<span class="sc">-</span>grey}</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>Lorem ipsum dolor sit amet,...</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code></pre></div>
 </div>
 <div id="columns" class="section level2">
 <h2>Columns</h2>
@@ -1020,11 +1023,11 @@ OOC
 <div class="col2">
 <p>A ut perore, ut lam simodi sinvel magnis doluptatem que est, tem quosantis is cone ea dolessus anditas pereper sperum que sim assundebis eum fuga. Et eate litia seruntotas ideni untorro mollatis recest anisqui ilicab ipsanitio.</p>
 </div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="op">:::</span>{.col2}</span>
-<span id="cb22-2"><a href="#cb22-2"></a>A ut perore, ut lam simodi sinvel magnis doluptatem que est, tem quosantis is cone ea</span>
-<span id="cb22-3"><a href="#cb22-3"></a>dolessus anditas pereper sperum que sim assundebis eum fuga. Et eate litia seruntotas</span>
-<span id="cb22-4"><a href="#cb22-4"></a>ideni untorro mollatis recest anisqui ilicab ipsanitio.</span>
-<span id="cb22-5"><a href="#cb22-5"></a><span class="op">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.col2}</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>A ut perore, ut lam simodi sinvel magnis doluptatem que est, tem quosantis is cone ea</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>dolessus anditas pereper sperum que sim assundebis eum fuga. Et eate litia seruntotas</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>ideni untorro mollatis recest anisqui ilicab ipsanitio.</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code></pre></div>
 </div>
 <div id="floats" class="section level2">
 <h2>Floats</h2>
@@ -1040,18 +1043,18 @@ OOC
 <p>This will float end (right of the page).</p>
 </div>
 </div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Clearfix is needed to make sure it recreates the normal content flow</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="op">:::</span>{.clearfix}</span>
-<span id="cb23-3"><a href="#cb23-3"></a><span class="op">:::</span>{.float<span class="op">-</span>start}</span>
-<span id="cb23-4"><a href="#cb23-4"></a>This will float <span class="kw">start</span> (left of the page).</span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="op">:::</span></span>
-<span id="cb23-6"><a href="#cb23-6"></a><span class="er">:::</span></span>
-<span id="cb23-7"><a href="#cb23-7"></a><span class="st">  </span></span>
-<span id="cb23-8"><a href="#cb23-8"></a><span class="er">:::</span>{.clearfix} </span>
-<span id="cb23-9"><a href="#cb23-9"></a><span class="op">:::</span>{.float<span class="op">-</span>end}</span>
-<span id="cb23-10"><a href="#cb23-10"></a>This will float <span class="kw">end</span> (right of the page).</span>
-<span id="cb23-11"><a href="#cb23-11"></a><span class="op">:::</span></span>
-<span id="cb23-12"><a href="#cb23-12"></a><span class="er">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clearfix is needed to make sure it recreates the normal content flow</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.clearfix}</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.float<span class="sc">-</span>start}</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>This will float <span class="fu">start</span> (left of the page).</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span>{.clearfix} </span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.float<span class="sc">-</span>end}</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>This will float <span class="fu">end</span> (right of the page).</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span></code></pre></div>
 <div class="page-break">
 
 </div>
@@ -1060,9 +1063,9 @@ OOC
 <h2>Page break</h2>
 <p>The template automatically creates a page break when your content doesn’t fit into a page. However, you may need to control this fragmentation to avoid solitary element. Simply create a fenced div with the class <code>.page-break</code> and it will push all the following content to the next page. Avoid using the <code>.page-break</code> class alongside floating element.</p>
 <p><strong>Example:</strong></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># Create an empty div thet will push all following content to the next page.</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a><span class="op">:::</span>{.page<span class="op">-</span><span class="cf">break</span>}</span>
-<span id="cb24-3"><a href="#cb24-3"></a><span class="op">:::</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty div thet will push all following content to the next page.</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span>{.page<span class="sc">-</span><span class="cf">break</span>}</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code></pre></div>
 <div class="back-cover">
 <div class="back-header">
 <h1 class="back-title">
