@@ -187,6 +187,8 @@ Tur, sequis sunt abor rempos molupiet lab ipsa natque con niminve llesequos derr
 <div id="LOT" class="section level1 lot unnumbered front-matter">
 <h1>Tables</h1>
 <ul>
+<li><a href="#tab:table-kable">1</a> Population of concern to UNHCR for the last 5 years</li>
+<li><a href="#tab:table-class">2</a> Population of concern to UNHCR for the last 5 years</li>
 </ul>
 </div>
 <div id="LOF" class="section level1 lof unnumbered front-matter">
@@ -493,315 +495,151 @@ Figure 2: Total number of refugees and IDPs - UNHCR Refugee Statistics
 </div>
 <div id="tables" class="section level2">
 <h2>Tables</h2>
-<p>You can also embed tables. The easiest way is to use the <code>kable</code> function from the <code>knitr</code> package, that is included in the code chunks of your Rmd file. To include the UNHCR styles a class <code>.table</code> needs to be added to the <code>kable</code> declaration.</p>
-<p>For example see the below table added simply with the <code>knitr::kable(data_frame_name, table.attr = "class=\"table\"", format = "html")</code> function, including some basic UNHCR styles. Be careful of the escape character to make sure it includes the extra "" as well as including the <code>format="html"</code> parameter.</p>
+<p>You can also embed tables. The easiest way is to use the <code>kable</code> function from the <code>knitr</code> package, that is included in the code chunks of your Rmd file. UNHCR styles are applied by default to the tables. For some flexibility, a few helper classes have been developed. Simply add <code>knitr::kable(data_frame_name)</code> to the code chunks to create a simple table.</p>
 <p><strong>Example:</strong></p>
-<table class="table">
+<table>
 <thead>
-<tr>
-<th style="text-align:left;">
-Year
-</th>
-<th style="text-align:right;">
-REF
-</th>
-<th style="text-align:right;">
-ASY
-</th>
-<th style="text-align:right;">
-IDP
-</th>
-<th style="text-align:right;">
-VDA
-</th>
-<th style="text-align:right;">
-STA
-</th>
-<th style="text-align:right;">
-OOC
-</th>
+<tr class="header">
+<th align="left">Year</th>
+<th align="right">REF</th>
+<th align="right">ASY</th>
+<th align="right">IDP</th>
+<th align="right">VDA</th>
+<th align="right">STA</th>
+<th align="right">OOC</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-2015
-</td>
-<td style="text-align:right;">
-16110280
-</td>
-<td style="text-align:right;">
-3223460
-</td>
-<td style="text-align:right;">
-37494172
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-2687759
-</td>
-<td style="text-align:right;">
-870688
-</td>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="right">16110280</td>
+<td align="right">3223460</td>
+<td align="right">37494172</td>
+<td align="right">0</td>
+<td align="right">2687759</td>
+<td align="right">870688</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2016
-</td>
-<td style="text-align:right;">
-17184291
-</td>
-<td style="text-align:right;">
-2729521
-</td>
-<td style="text-align:right;">
-36627127
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3242206
-</td>
-<td style="text-align:right;">
-803084
-</td>
+<tr class="even">
+<td align="left">2016</td>
+<td align="right">17184291</td>
+<td align="right">2729521</td>
+<td align="right">36627127</td>
+<td align="right">0</td>
+<td align="right">3242206</td>
+<td align="right">803084</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2017
-</td>
-<td style="text-align:right;">
-19940568
-</td>
-<td style="text-align:right;">
-3089503
-</td>
-<td style="text-align:right;">
-39118516
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3853982
-</td>
-<td style="text-align:right;">
-1596125
-</td>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="right">19940568</td>
+<td align="right">3089503</td>
+<td align="right">39118516</td>
+<td align="right">0</td>
+<td align="right">3853982</td>
+<td align="right">1596125</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2018
-</td>
-<td style="text-align:right;">
-20359556
-</td>
-<td style="text-align:right;">
-3501627
-</td>
-<td style="text-align:right;">
-41425168
-</td>
-<td style="text-align:right;">
-2592947
-</td>
-<td style="text-align:right;">
-3851981
-</td>
-<td style="text-align:right;">
-1182756
-</td>
+<tr class="even">
+<td align="left">2018</td>
+<td align="right">20359556</td>
+<td align="right">3501627</td>
+<td align="right">41425168</td>
+<td align="right">2592947</td>
+<td align="right">3851981</td>
+<td align="right">1182756</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2019
-</td>
-<td style="text-align:right;">
-20444819
-</td>
-<td style="text-align:right;">
-4148194
-</td>
-<td style="text-align:right;">
-43503362
-</td>
-<td style="text-align:right;">
-3582202
-</td>
-<td style="text-align:right;">
-3561980
-</td>
-<td style="text-align:right;">
-5740622
-</td>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="right">20444819</td>
+<td align="right">4148194</td>
+<td align="right">43503362</td>
+<td align="right">3582202</td>
+<td align="right">3561980</td>
+<td align="right">5740622</td>
 </tr>
 </tbody>
 </table>
-<p>There are 2 ways to edit the table: using some parameters of the <strong><code>kable</code></strong> function or by adding CSS classes to the <strong><code>table.attr</code></strong> parameter.</p>
-<p>The <code>kable</code> function is mainly to affect the content of the table itself, like formatting numbers, changing column names or add figure caption. You can find some information on how to use it on the bookdown page<span id="fn3" class="footnote" data-pagedown-footnote-number="3" style="white-space: pre-line;"><a href="https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables</a></span>.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ref_idp_table)</span></code></pre></div>
+<p>There are 2 ways to edit the table: using some parameters of the <strong><code>kable</code></strong> function or by wrapping the table with some CSS classes.</p>
+<p>The <code>kable</code> function is mainly to affect the content of the table itself, like formatting numbers, changing column names or add caption. If the list of table is set to <code>TRUE</code>, the caption added to the <code>kable</code> function will appear in the list. You can find some information on how to use it on the bookdown page<span id="fn3" class="footnote" data-pagedown-footnote-number="3" style="white-space: pre-line;"><a href="https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables</a></span>.</p>
 <p><strong>Example:</strong></p>
-<table class="table">
-<caption>
-<span id="tab:table-kable">Table 1: </span>Population of concern to UNHCR for the last 5 years
-</caption>
+<table>
+<caption><span id="tab:table-kable">Table 1: </span>Population of concern to UNHCR for the last 5 years</caption>
+<colgroup>
+<col width="5%" />
+<col width="10%" />
+<col width="13%" />
+<col width="10%" />
+<col width="26%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Years
-</th>
-<th style="text-align:right;">
-Refugees
-</th>
-<th style="text-align:right;">
-Asylum-seekers
-</th>
-<th style="text-align:right;">
-IDPs
-</th>
-<th style="text-align:right;">
-Venezuelans displaced abroad
-</th>
-<th style="text-align:right;">
-Stateless persons
-</th>
-<th style="text-align:right;">
-Others of concern
-</th>
+<tr class="header">
+<th align="left">Years</th>
+<th align="right">Refugees</th>
+<th align="right">Asylum-seekers</th>
+<th align="right">IDPs</th>
+<th align="right">Venezuelans displaced abroad</th>
+<th align="right">Stateless persons</th>
+<th align="right">Others of concern</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-2015
-</td>
-<td style="text-align:right;">
-16,110,280
-</td>
-<td style="text-align:right;">
-3,223,460
-</td>
-<td style="text-align:right;">
-37,494,172
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-2,687,759
-</td>
-<td style="text-align:right;">
-870,688
-</td>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="right">16,110,280</td>
+<td align="right">3,223,460</td>
+<td align="right">37,494,172</td>
+<td align="right">0</td>
+<td align="right">2,687,759</td>
+<td align="right">870,688</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2016
-</td>
-<td style="text-align:right;">
-17,184,291
-</td>
-<td style="text-align:right;">
-2,729,521
-</td>
-<td style="text-align:right;">
-36,627,127
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3,242,206
-</td>
-<td style="text-align:right;">
-803,084
-</td>
+<tr class="even">
+<td align="left">2016</td>
+<td align="right">17,184,291</td>
+<td align="right">2,729,521</td>
+<td align="right">36,627,127</td>
+<td align="right">0</td>
+<td align="right">3,242,206</td>
+<td align="right">803,084</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2017
-</td>
-<td style="text-align:right;">
-19,940,568
-</td>
-<td style="text-align:right;">
-3,089,503
-</td>
-<td style="text-align:right;">
-39,118,516
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3,853,982
-</td>
-<td style="text-align:right;">
-1,596,125
-</td>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="right">19,940,568</td>
+<td align="right">3,089,503</td>
+<td align="right">39,118,516</td>
+<td align="right">0</td>
+<td align="right">3,853,982</td>
+<td align="right">1,596,125</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2018
-</td>
-<td style="text-align:right;">
-20,359,556
-</td>
-<td style="text-align:right;">
-3,501,627
-</td>
-<td style="text-align:right;">
-41,425,168
-</td>
-<td style="text-align:right;">
-2,592,947
-</td>
-<td style="text-align:right;">
-3,851,981
-</td>
-<td style="text-align:right;">
-1,182,756
-</td>
+<tr class="even">
+<td align="left">2018</td>
+<td align="right">20,359,556</td>
+<td align="right">3,501,627</td>
+<td align="right">41,425,168</td>
+<td align="right">2,592,947</td>
+<td align="right">3,851,981</td>
+<td align="right">1,182,756</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2019
-</td>
-<td style="text-align:right;">
-20,444,819
-</td>
-<td style="text-align:right;">
-4,148,194
-</td>
-<td style="text-align:right;">
-43,503,362
-</td>
-<td style="text-align:right;">
-3,582,202
-</td>
-<td style="text-align:right;">
-3,561,980
-</td>
-<td style="text-align:right;">
-5,740,622
-</td>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="right">20,444,819</td>
+<td align="right">4,148,194</td>
+<td align="right">43,503,362</td>
+<td align="right">3,582,202</td>
+<td align="right">3,561,980</td>
+<td align="right">5,740,622</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ref_idp_table,</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">table.attr =</span> <span class="st">&quot;class=</span><span class="sc">\&quot;</span><span class="st">table</span><span class="sc">\&quot;</span><span class="st">&quot;</span>,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">format =</span> <span class="st">&quot;html&quot;</span>,</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&#39;Years&#39;</span>, <span class="st">&#39;Refugees&#39;</span>, <span class="st">&#39;Asylum-seekers&#39;</span>, <span class="st">&#39;IDPs&#39;</span>,</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;Venezuelans displaced abroad&#39;</span>, <span class="st">&#39;Stateless persons&#39;</span>,</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;Others of concern&#39;</span>),</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">format.args =</span> <span class="fu">list</span>(<span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
-<p>Adding CSS classes to the to the <code>table.attr</code> parameter will only affect the style of the table.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ref_idp_table,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&#39;Years&#39;</span>, <span class="st">&#39;Refugees&#39;</span>, <span class="st">&#39;Asylum-seekers&#39;</span>, <span class="st">&#39;IDPs&#39;</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;Venezuelans displaced abroad&#39;</span>, <span class="st">&#39;Stateless persons&#39;</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                           <span class="st">&#39;Others of concern&#39;</span>),</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">format.args =</span> <span class="fu">list</span>(<span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
+<p>Adding CSS classes to the to the <code>div</code> around the table will only affect the style of the table. The classes must be added around the whole code chunk.</p>
 <p>Here is the list of the available classes:</p>
 <ul>
-<li><code>.table</code>: Apply base UNHCR style. <strong>Mandatory!!!</strong></li>
 <li><code>.table-striped</code>: Apply light-grey background even odd rows.</li>
 <li><code>.table-striped-blue</code>: Apply light-blue background even odd rows.</li>
 <li><code>.table-width</code>: To remove the default width of 100% and apply the width required by the data inside the table.</li>
@@ -812,158 +650,69 @@ Others of concern
 
 </div>
 <p><strong>Example:</strong></p>
-<table class="table table-striped-blue table-width">
-<caption>
-<span id="tab:table-class">Table 2: </span>Population of concern to UNHCR for the last 5 years
-</caption>
+<div class="table-striped-blue table-width">
+<table>
+<caption><span id="tab:table-class">Table 2: </span>Population of concern to UNHCR for the last 5 years</caption>
 <thead>
-<tr>
-<th style="text-align:left;">
-Year
-</th>
-<th style="text-align:right;">
-REF
-</th>
-<th style="text-align:right;">
-ASY
-</th>
-<th style="text-align:right;">
-IDP
-</th>
-<th style="text-align:right;">
-VDA
-</th>
-<th style="text-align:right;">
-STA
-</th>
-<th style="text-align:right;">
-OOC
-</th>
+<tr class="header">
+<th align="left">Year</th>
+<th align="right">REF</th>
+<th align="right">ASY</th>
+<th align="right">IDP</th>
+<th align="right">VDA</th>
+<th align="right">STA</th>
+<th align="right">OOC</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-2015
-</td>
-<td style="text-align:right;">
-16,110,280
-</td>
-<td style="text-align:right;">
-3,223,460
-</td>
-<td style="text-align:right;">
-37,494,172
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-2,687,759
-</td>
-<td style="text-align:right;">
-870,688
-</td>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="right">16,110,280</td>
+<td align="right">3,223,460</td>
+<td align="right">37,494,172</td>
+<td align="right">0</td>
+<td align="right">2,687,759</td>
+<td align="right">870,688</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2016
-</td>
-<td style="text-align:right;">
-17,184,291
-</td>
-<td style="text-align:right;">
-2,729,521
-</td>
-<td style="text-align:right;">
-36,627,127
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3,242,206
-</td>
-<td style="text-align:right;">
-803,084
-</td>
+<tr class="even">
+<td align="left">2016</td>
+<td align="right">17,184,291</td>
+<td align="right">2,729,521</td>
+<td align="right">36,627,127</td>
+<td align="right">0</td>
+<td align="right">3,242,206</td>
+<td align="right">803,084</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2017
-</td>
-<td style="text-align:right;">
-19,940,568
-</td>
-<td style="text-align:right;">
-3,089,503
-</td>
-<td style="text-align:right;">
-39,118,516
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3,853,982
-</td>
-<td style="text-align:right;">
-1,596,125
-</td>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="right">19,940,568</td>
+<td align="right">3,089,503</td>
+<td align="right">39,118,516</td>
+<td align="right">0</td>
+<td align="right">3,853,982</td>
+<td align="right">1,596,125</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2018
-</td>
-<td style="text-align:right;">
-20,359,556
-</td>
-<td style="text-align:right;">
-3,501,627
-</td>
-<td style="text-align:right;">
-41,425,168
-</td>
-<td style="text-align:right;">
-2,592,947
-</td>
-<td style="text-align:right;">
-3,851,981
-</td>
-<td style="text-align:right;">
-1,182,756
-</td>
+<tr class="even">
+<td align="left">2018</td>
+<td align="right">20,359,556</td>
+<td align="right">3,501,627</td>
+<td align="right">41,425,168</td>
+<td align="right">2,592,947</td>
+<td align="right">3,851,981</td>
+<td align="right">1,182,756</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-2019
-</td>
-<td style="text-align:right;">
-20,444,819
-</td>
-<td style="text-align:right;">
-4,148,194
-</td>
-<td style="text-align:right;">
-43,503,362
-</td>
-<td style="text-align:right;">
-3,582,202
-</td>
-<td style="text-align:right;">
-3,561,980
-</td>
-<td style="text-align:right;">
-5,740,622
-</td>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="right">20,444,819</td>
+<td align="right">4,148,194</td>
+<td align="right">43,503,362</td>
+<td align="right">3,582,202</td>
+<td align="right">3,561,980</td>
+<td align="right">5,740,622</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ref_idp_table,</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">table.attr =</span> <span class="st">&quot;class=</span><span class="sc">\&quot;</span><span class="st">table table-striped-blue table-width</span><span class="sc">\&quot;</span><span class="st">&quot;</span>,</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">format =</span> <span class="st">&quot;html&quot;</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">format.args =</span> <span class="fu">list</span>(<span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">caption =</span> <span class="st">&quot;Population of concern to UNHCR for the last 5 years&quot;</span>)</span></code></pre></div>
+</div>
 </div>
 </div>
 <div id="helper-class" class="section level1">

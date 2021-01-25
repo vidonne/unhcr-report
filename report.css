@@ -267,11 +267,11 @@ caption,
   padding-bottom: 0.5em;
   text-align: center;
 }
-
+/*
 th {
   text-align: inherit;
 }
-
+*/
 thead,
 tbody,
 tfoot,
@@ -283,7 +283,7 @@ th {
   border-width: 0;
 }
 
-.table {
+table {
   --unhcr-table-bg: transparent;
   --unhcr-table-striped-color: var(--unhcr-font-color);
   --unhcr-table-striped-bg: rgba(0, 0, 0, 0.05);
@@ -293,41 +293,47 @@ th {
   vertical-align: top;
   border-color: var(--unhcr-grey20);
 }
-.table > :not(caption) > * > * {
+
+table > :not(caption) > * > * {
   padding: 0.25em 0.5em;
   background-color: var(--unhcr-table-bg);
   background-image: linear-gradient(var(--unhcr-table-accent-bg), var(--unhcr-table-accent-bg));
   border-bottom-width: 1px;
   font-size: 0.9em;
 }
-.table > tbody {
+
+table > tbody {
   vertical-align: inherit;
 }
-.table > thead {
+
+table > thead {
   vertical-align: bottom;
   font-weight: 700;
 }
-.table > :not(:last-child) > :last-child > * {
+
+table > :not(:last-child) > :last-child > * {
   border-bottom-color: var(--unhcr-blue);
 }
-.table-bordered > :not(caption) > * {
+
+.table-bordered > table > :not(caption) > * {
   border-width: 1px 0;
 }
-.table-bordered > :not(caption) > * > * {
+.table-bordered > table > :not(caption) > * > * {
   border-width: 0 1px;
 }
-.table-borderless > :not(caption) > * > * {
+.table-borderless > table > :not(caption) > * > * {
   border-bottom-width: 0;
 }
-.table-striped > tbody > tr:nth-of-type(odd) {
+
+.table-striped > table > tbody > tr:nth-of-type(odd) {
   --unhcr-table-accent-bg: var(--unhcr-table-striped-bg);
   color: var(--unhcr-table-striped-color);
 }
-.table-striped-blue > tbody > tr:nth-of-type(odd) {
+.table-striped-blue > table > tbody > tr:nth-of-type(odd) {
   --unhcr-table-accent-bg: rgba(0, 114, 188, 0.1);
   color: var(--unhcr-table-striped-color);
 }
-.table-width {
+.table-width > table {
   width: auto;
   margin-left: auto;
   margin-right: auto;

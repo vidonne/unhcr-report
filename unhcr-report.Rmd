@@ -467,9 +467,7 @@ multi_line
 
 ## Tables
 
-You can also embed tables. The easiest way is to use the `kable` function from the `knitr` package, that is included in the code chunks of your Rmd file. To include the UNHCR styles a class `.table` needs to be added to the `kable` declaration.
-
-For example see the below table added simply with the `knitr::kable(data_frame_name, table.attr = "class=\"table\"", format = "html")` function, including some basic UNHCR styles. Be careful of the escape character to make sure it includes the extra "" as well as including the `format="html"` parameter.
+You can also embed tables. The easiest way is to use the `kable` function from the `knitr` package, that is included in the code chunks of your Rmd file. UNHCR styles are applied by default to the tables. For some flexibility, a few helper classes have been developed. Simply add `knitr::kable(data_frame_name)` to the code chunks to create a simple table.
 
 **Example:**
 
@@ -484,19 +482,21 @@ ref_idp_table <- popdata %>%
                    OOC = sum(OOC, na.rm = TRUE)) %>% 
   tail(5)
 
-knitr::kable(ref_idp_table, table.attr = "class=\"table\"", format = "html")
+knitr::kable(ref_idp_table)
 ```
 
-There are 2 ways to edit the table: using some parameters of the **`kable`** function or by adding CSS classes to the **`table.attr`** parameter.
+```{r table-simple-code, include=TRUE, eval=FALSE}
+knitr::kable(ref_idp_table)
+```
 
-The `kable` function is mainly to affect the content of the table itself, like formatting numbers, changing column names or add figure caption. You can find some information on how to use it on the [bookdown page](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables).
+There are 2 ways to edit the table: using some parameters of the **`kable`** function or by wrapping the table with some CSS classes.
+
+The `kable` function is mainly to affect the content of the table itself, like formatting numbers, changing column names or add caption. If the list of table is set to `TRUE`, the caption added to the `kable` function will appear in the list. You can find some information on how to use it on the [bookdown page](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html#customize-html-tables).
 
 **Example:**
 
 ```{r table-kable, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::kable(ref_idp_table,
-             table.attr = "class=\"table\"",
-             format = "html",
              col.names = c('Years', 'Refugees', 'Asylum-seekers', 'IDPs',
                            'Venezuelans displaced abroad', 'Stateless persons',
                            'Others of concern'),
@@ -506,8 +506,6 @@ knitr::kable(ref_idp_table,
 
 ```{r table-kable-code, include=TRUE, eval=FALSE}
 knitr::kable(ref_idp_table,
-             table.attr = "class=\"table\"",
-             format = "html",
              col.names = c('Years', 'Refugees', 'Asylum-seekers', 'IDPs',
                            'Venezuelans displaced abroad', 'Stateless persons',
                            'Others of concern'),
@@ -515,11 +513,10 @@ knitr::kable(ref_idp_table,
              caption = "Population of concern to UNHCR for the last 5 years")
 ```
 
-Adding CSS classes to the to the `table.attr` parameter will only affect the style of the table.
+Adding CSS classes to the to the `div` around the table will only affect the style of the table. The classes must be added around the whole code chunk.
 
 Here is the list of the available classes:
 
-* `.table`: Apply base UNHCR style. **Mandatory!!!**
 * `.table-striped`: Apply light-grey background even odd rows.
 * `.table-striped-blue`: Apply light-blue background even odd rows.
 * `.table-width`: To remove the default width of 100% and apply the width required by the data inside the table.
@@ -531,21 +528,16 @@ Here is the list of the available classes:
 
 **Example:**
 
+:::{.table-striped-blue .table-width}
+
 ```{r table-class, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::kable(ref_idp_table,
-             table.attr = "class=\"table table-striped-blue table-width\"",
-             format = "html",
              format.args = list(big.mark = ",", scientific = FALSE),
              caption = "Population of concern to UNHCR for the last 5 years")
 ```
 
-```{r table-class-code, include=TRUE, eval=FALSE}
-knitr::kable(ref_idp_table,
-             table.attr = "class=\"table table-striped-blue table-width\"",
-             format = "html",
-             format.args = list(big.mark = ",", scientific = FALSE),
-             caption = "Population of concern to UNHCR for the last 5 years")
-```
+:::
+
 
 # Helper class
 
