@@ -135,7 +135,7 @@
 /* Front page or title page */
 .front-page {
   counter-reset: page;
-  break-after: page;
+  break-after: right;
 }
 
 /* Front matter*/
@@ -231,7 +231,7 @@
 
 /* page breaks; aka CSS fragmentation */
 .level1 {
-  /* break-before: recto; */
+  break-before: page;
   page: chapter;
 }
 .front-matter-container .level1 {
