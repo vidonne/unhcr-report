@@ -215,7 +215,7 @@
   break-before: left;
   page: backmatter;
 }
-.pagedjs_page:last-of-type {
+.pagedjs_page:nth-last-of-type(1) {
   background-image: var(--back-cover);
   background-position: 10mm 30mm;
   background-size: 190mm 257mm;
