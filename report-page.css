@@ -231,7 +231,7 @@
 
 /* page breaks; aka CSS fragmentation */
 .level1 {
-  break-before: page;
+  break-after: page;
   page: chapter;
 }
 .front-matter-container .level1 {

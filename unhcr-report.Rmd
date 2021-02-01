@@ -52,7 +52,13 @@ links-to-footnotes: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+  echo = TRUE,
+  dev = "ragg_png",
+  fig.width = 5.5,
+  fig.height = 4,
+  fig.align = "center"
+  )
 ```
 
 ```{r packages, include=FALSE, message=FALSE, warning=FALSE}
@@ -377,7 +383,7 @@ Whole width images might not always be the best option for your layout, especial
 :::
 ```
 
-Combine it with the `.float-start` or `.float-end` classes to align the image on a specific side of the page and even have text around it.**Be careful with the use of floats** as the image and caption aren't part of the text flow anymore so all the content that follows will be placed next to it and not anymore below. Wrap both the image (+ caption) and the content you want to be next to it with the class `.clearfix` to cancel this. The content after the `<div class="clearfix">` will be back within the normal flow.
+Combine it with the `.float-start` or `.float-end` classes to align the image on a specific side of the page and even have text around it. **Be careful with the use of floats** as the image and caption aren't part of the text flow anymore so all the content that follows will be placed next to it and not anymore below. Wrap both the image (+ caption) and the content you want to be next to it with the class `.clearfix` to cancel this. The content after the `<div class="clearfix">` will be back within the normal flow.
 
 **Example:**
 
@@ -407,7 +413,7 @@ You can also embed plots created directly in R. Please review the vignette on th
 If you have the List of figure activated you will need to include `fig.cap` in code chunk parameter. The text will be used for the caption itself as well as the name in the List of figure.
 
 
-```{r single-line, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Total number of refugees - UNHCR Refugee Statistics", dpi=300}
+```{r single-line, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Total number of refugees - UNHCR Refugee Statistics"}
 # Load data from unhcrdatapackage
 popdata <- unhcrdatapackage::end_year_population_totals
 
@@ -426,7 +432,7 @@ single_line <- ggplot2::ggplot(ref_year, aes(x = Year, y = REF)) + #Assign Year 
        caption = "Source: UNHCR Refugee Statistics") +
   scale_y_continuous(label = scales::label_number_si()) + ## Format axis number
   scale_x_date(breaks = breaks_pretty(n = 10)) + #Add axis label every 10 years
-  unhcr_theme(grid = "Y") +
+  unhcr_theme(grid = "Y", base_size = 10.5) +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank()) #Remove axis title in this context
 
@@ -437,7 +443,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 Unlike the images the size of the plots will be defined directly in the code chunk using the `out.width` parameter. We recommend that you use relative measure like `out.width="75%"`. You can also set the alignment of the figure in the code chunk parameter using the `fig.align` tag, where you set it to 'left', 'center' or 'right'.
 
-```{r multi-line, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Total number of refugees and IDPs - UNHCR Refugee Statistics", dpi=300, out.width="75%", fig.align='center'}
+```{r multi-line, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Total number of refugees and IDPs - UNHCR Refugee Statistics"}
 # Simplify data for the line chart need
 ref_idp_year <- popdata %>% 
   dplyr::group_by(Year) %>% 
@@ -458,7 +464,7 @@ multi_line <- ggplot2::ggplot(ref_idp_year, aes(x = Year, y = number_people, col
   scale_x_date(breaks = breaks_pretty(n = 10)) + #Add axis label every 10 years
   scale_color_manual(labels = c("IDPs", "Refugees"),
                      values = usecol(pal = c(unhcr_green, unhcr_blue))) + #Set color from the unhcr_pal
-  unhcr_theme(grid = "Y") +
+  unhcr_theme(grid = "Y", ) +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank())
 
